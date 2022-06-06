@@ -10,26 +10,20 @@
 Nicole 是一个在基于Mirai框架的机器人应用
 这个项目的名字来源于
      <p><a href = "http://www.kyotoanimation.co.jp/"></a>作品<a href = "[https://zh.moegirl.org/zh-hans/%E5%A2%83%E7%95%8C%E7%9A%84%E5%BD%BC%E6%96%B9](https://baike.baidu.com/item/LoveLive%21/6278898?fromtitle=lovelive&fromid=7288832&fr=aladdin)">《LoveLive! 》</a>的<a href = "[https://zh.moegirl.org/zh-hans/%E6%A0%97%E5%B1%B1%E6%9C%AA%E6%9D%A5](https://baike.baidu.com/item/%E7%9F%A2%E6%B3%BD%E5%A6%AE%E5%8F%AF/4218178)">矢泽妮可(Yazawa <b>Nico</b>)</a></p>
-     <p><a href = "https://www.crypton.co.jp/">CRYPTON</a>以<a href = "https://www.crypton.co.jp/miku_eng">初音未来</a>为代表的创作与活动<a href = "https://magicalmirai.com/2019/index_en.html">(Magical <b>Mirai</b>)</a></p>
-图标以及形象由画师<a href = "">DazeCake</a>绘制
+    
 </div>
-
-# mirai-console-addition
-mirai-console的扩展插件，提供对console功能的增强
-
-### 其他插件开发与获取
-[插件中心](https://github.com/mamoe/mirai-plugins) 
-[mirai-console插件开发快速上手](PluginDocs/ToStart.MD) 
 
 ### 使用
 
-将该插件放入`plugins`目录下，并修改`plugins/ConsoleAddition`目录下的配置文件
+1.将目录克隆下来
+2.安装好环境Nodejs>=14,Java>=11,redius,mysql.
+3.安装Mirai，Mirai-httpapi，并登录
+3.cmd打开当前项目目录，执行`node demo.js`
 
 ### 功能一览
 
 + [x] [MD5密码登录](#md5密码登录)
 + [x] [保存MD5密码，并自动登录](#自动登录)
-+ [ ] [多账号登录时管理员共享](#管理员共享) 兼容性问题，暂时关闭该功能
 + [ ] 简易定时任务
 + [ ] 更好的验证码输入方式
 + [ ] Bot智能重启
