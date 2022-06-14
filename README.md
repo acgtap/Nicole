@@ -1,128 +1,179 @@
-<div align="center">
-   <img width="160" src="[[http://img.mamoe.net/2020/02/16/a759783b42f72.png](https://s3.bmp.ovh/imgs/2022/06/06/3f09aaae51ad5cee.png)](https://s3.bmp.ovh/imgs/2022/06/06/3f09aaae51ad5cee.png)" alt="logo"></br>
+<p align="center" >
+  <a href="https://github.com/CMHopeSunshine/LittlePaimon/tree/nonebot2"><img src="http://static.cherishmoon.fun/LittlePaimon/readme/logo.png" width="256" height="256" alt="LittlePaimon"></a>
+</p>
+<h1 align="center">小派蒙|LittlePaimon</h1>
+<h4 align="center">✨基于<a href="https://github.com/mamoe/mirai" target="_blank">Mirai</a>和<a href="" target="_blank">Nodejs</a>的Q群机器人✨</h4>
 
-   <img width="95" src="http://img.mamoe.net/2020/02/16/c4aece361224d.png" alt="title">
+<p align="center">
+    <a href="https://cdn.jsdelivr.net/gh/CMHopeSunshine/LittlePaimon@master/LICENSE"><img src="https://img.shields.io/github/license/CMHopeSunshine/LittlePaimon" alt="license"></a>
+    <img src="https://img.shields.io/badge/Python-3.8+-yellow" alt="python">
+    <a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=MmWrI&from=246610&biz=ka"><img src="https://img.shields.io/badge/QQ群交流-green?style=flat-square" alt="QQ guild"></a>
+</p>
 
-----
+## 丨简介
 
-[![Gitter](https://badges.gitter.im/mamoe/mirai.svg)](https://gitter.im/mamoe/mirai?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+原神多功能机器人，通过米游社接口查询uid的游戏信息，并提供WIKI查询和各种各样的好玩的功能。
 
-Nicole 是一个在基于Mirai框架的机器人应用
-这个项目的名字来源于
-     <p><a href = "http://www.kyotoanimation.co.jp/"></a>作品<a href = "[https://zh.moegirl.org/zh-hans/%E5%A2%83%E7%95%8C%E7%9A%84%E5%BD%BC%E6%96%B9](https://baike.baidu.com/item/LoveLive%21/6278898?fromtitle=lovelive&fromid=7288832&fr=aladdin)">《LoveLive! 》</a>的<a href = "[https://zh.moegirl.org/zh-hans/%E6%A0%97%E5%B1%B1%E6%9C%AA%E6%9D%A5](https://baike.baidu.com/item/%E7%9F%A2%E6%B3%BD%E5%A6%AE%E5%8F%AF/4218178)">矢泽妮可(Yazawa <b>Nico</b>)</a></p>
-    
-</div>
+本README为NoneBot2版的介绍，Hoshino版详见：
 
-### 使用
++ [Github主页](https://github.com/CMHopeSunshine/LittlePaimon)
++ [README博客](https://blog.cherishmoon.fun/posts/littlepaimon-hoshino.html)
 
-1.将目录克隆下来
-2.安装好环境Nodejs>=14,Java>=11,redius,mysql.
-3.安装Mirai，Mirai-httpapi，并登录
-3.cmd打开当前项目目录，执行`node demo.js`
+## 丨功能示例
 
-### 功能一览
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/ys.jpg" alt="ys">
 
-+ [x] [MD5密码登录](#md5密码登录)
-+ [x] [保存MD5密码，并自动登录](#自动登录)
-+ [ ] 简易定时任务
-+ [ ] 更好的验证码输入方式
-+ [ ] Bot智能重启
-+ [ ] [欢迎讨论和贡献代码][Issue]
+<details>
+<summary>角色背包</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/ysa.jpg" alt="ysa">
+</details>
 
+<details>
+<summary>角色详情</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/ysc.jpg" alt="ysc">
+</details>
 
+<details>
+<summary>深渊信息</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/sy12.jpg" alt="sy">
+</details>
 
-### 全局配置
-```yaml
-## plugin/ConsoleAddition/main.yml
-auto-login: true
-md5-login: true
-share-manager: true
+<details>
+<summary>模拟抽卡</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/十连.jpg" alt="十连">
+</details>
+
+<details>
+<summary>实时便签</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/ssbq.jpg" alt="ssbq">
+</details>
+
+<details>
+<summary>每月札记</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/myzj.jpg" alt="myzj">
+</details>
+
+<details>
+<summary>角色材料</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/material.png" alt="material">
+</details>
+
+<details>
+<summary>抽卡记录</summary>
+<img src="http://static.cherishmoon.fun/LittlePaimon/readme/gachalog.jpg" alt="gachalog">
+</details>
+
+## 丨更新日志
++ 5.19
+  - 米游社签到新增`全部重签`，仅限超级管理员使用，需@机器人
+  - `原神猜语音`不再需要`我猜`，直接回答角色别名即可参与猜猜看
+  - 异步请求库从`aiohttp`改用`httpx`，需安装依赖库`pip install httpx`
+  - 修复`60秒读世界`在频道无法关闭推送的BUG
++ 5.20
+  - 修复`ysc`缺少资源问题
+  - 封装部分常用方法，优化导包
+  - `Paimon_Chat`新增`更新派蒙语音`，实时更新语音
++ 5.21
+  - 修复可能因ssl证书导致的静态资源下载问题
++ 5.23
+  - 新增`xx原魔图鉴`
++ 5.25
+  - `ys、ysc、ysa、sy`等和`wiki`模块指令可以对话式查询
++ 5.27
+  - 新增`原神日历`[@nicklly](https://github.com/nicklly)
++ 5.28
+  - `Paimon_Chat`聊天新增`学习群友发言`（魔改自[Pallas-Bot](https://github.com/InvoluteHell/Pallas-Bot/tree/master/src/plugins/repeater)），需安装`jieba_fast、pymongo、pypinyin依赖库`、`mongodb数据库`且在`.env.*`配置文件中添加mongodb连接参数`paimon_mongodb_url`，例如`paimon_mongodb_url=mongodb://localhost:27017/`
++ 6.3
+  - 新增游戏内展柜角色面板卡片，使用`更新角色面板`来获取角色，`ysd角色名`来查看角色卡片
+  - 修复部分不记录上次查询的uid的bug
+  - 大幅缩短深渊指令`sy`的缓存时间
++ 6.6
+  - 修复`模拟抽卡定轨`和`抽卡记录导出`bug
++ 6.7
+  - 修复`原神猜语音`和`模拟抽卡`因`nonebot2.0.0b3`版本Union校验产生的bug，但`原神猜语音`将暂时无法私聊使用
++ 6.9
+  - 新增`帮助菜单`指令~~(不太好看，继续美化)~~
++ 6.12
+  - 新增`云原神签到`等功能[@nicklly](https://github.com/nicklly)
+  - 修复部分bug，新增`好友、群新成员和龙王提醒`[#45](https://github.com/CMHopeSunshine/LittlePaimon/issues/45)
+
+## 丨功能列表
+
+详见[功能列表](https://blog.cherishmoon.fun/posts/nonebot2funclist.html)
+
+## 丨部署方法
+### 我很熟悉NoneBot2
+
+ + 部署NoneBot2和go-cqhttp
+
+ + 在NoneBot2根目录，克隆本项目
+   `git clone -b nonebot2 https://github.com/CMHopeSunshine/LittlePaimon `
+   
+ + 安装依赖
+   ```shell
+   # 定时任务插件
+   nb plugin install nonebot-plugin-apscheduler
+   # 需要的依赖库
+   pip install aiohttp xlsxwriter sqlitedict matplotlib aiofiles
+   ```
+ + 启用插件
+   ```python
+   # 编辑bot.py，添加：
+   nonebot.load_plugins("LittlePaimon")
+   ```
+   
+### 我不熟悉NoneBot2
+**详细部署教程：**
+
+- [Linux](https://blog.cherishmoon.fun/posts/nonebot2deploy.html#linux)
+- [安卓系统](https://blog.cherishmoon.fun/posts/nonebot2deploy.html#%E5%9C%A8%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%83%A8%E7%BD%B2)
+- [Windows](https://blog.cherishmoon.fun/posts/nonebot2deploy.html#windows)
+
+### 添加公共cookie
+
+部署完成后，你还需要至少添加一条**公共cookie**，小派蒙才能使用查询功能。
+
+登录米游社网页版，在地址栏粘贴：
 
 ```
-
-> 设置为false关闭指定子功能
-
-
-### md5密码登录
-
-`Console Addition`提供了新的Command进行md5登录
-
-```
-/login-md5 qq md5
+javascript:(function(){prompt(document.domain,document.cookie)})();
 ```
 
-> md5密码为32位md5。
-> md5密码是QQ的登录方式，相对于明文密码较安全。
-> 但md5密码的丢失，依旧会导致QQ被他人登录。
+复制得到的cookie，向小派蒙发送`添加公共ck`和粘贴的内容，即可开始使用
 
-### 自动登录
+## 丨感谢
 
-`Console Addition`提供了新的Command进行自动保存密码，并在下次启动时，对于保存密码的账号进行自动登录
+代码水平很烂，站在巨人的肩膀上努力学习ing......
 
-```
-/auto-login qq password
-```
+- [NoneBot2](https://github.com/nonebot/nonebot2) - 跨平台异步机器人框架
+- [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) - Onebot标准的框架实现
+- [西北一枝花](https://github.com/Nwflower) - 美工大大和武器攻略图提供
+- [nicklly](https://github.com/nicklly) - 原神日历、云原神等功能贡献者
+- [egenshin](https://github.com/pcrbot/erinilis-modules/tree/master/egenshin) - 抽卡和猜语音代码、资源参考
+- [bluemushoom](https://bbs.nga.cn/nuke.php?func=ucp&uid=62861898) - 全角色收益曲线和参考面板攻略图来源
+- [genshin-gacha-export](https://github.com/sunfkny/genshin-gacha-export) - 抽卡记录导出代码参考
+- [Pallas-Bot](https://github.com/InvoluteHell/Pallas-Bot/tree/master/src/plugins/repeater) - 群聊记录发言学习代码参考
+- [西风驿站](https://bbs.mihoyo.com/ys/collection/307224) - 角色攻略一图流来源
+- [游创工坊](https://space.bilibili.com/176858937) - 深渊排行榜数据来源
 
-> 为保留正常登录（不保存密码）的模式，自动登录采用了新的命令作为入口。
-> 自动登录保存的是用户的md5密码，保存在plugin/ConsoleAddition/auto-login.yml内
+## 丨赞助
+- 如果本项目对你有帮助，给个star~~求求啦
+- 部分资源使用了云存储，如果想赞助流量费用，欢迎来[爱发电](https://afdian.net/@cherishmoon)，十分感谢！
 
-```yaml
-## plugin/ConsoleAddition/auto-login.yml
+| 赞助者            | 金额  |
+|----------------|-----|
+| 深海             | 10  |
+| 夜空koi          | 30  |
+| 情话             | 20  |
+| 爱发电用户_Mfms     | 15  |
+| 米特建木           | 10  |
+| 永远的皇珈骑士        | 30  |
+| 小兔和鹿           | 30  |
+| el psy congroo | 20  |
+| jimjqn         | 30  |
 
-bots:
-  '123456789':
-    md5: 41D2821CBFC5C789DAC7D18B28EF87BD
+## 丨其他
 
-  '987654321':
-    md5: B6BFAFDA4BA9CCED6846839C6D7B2AD6
+- 本项目仅供学习使用，禁止用于商业用途
 
-```
-
-> 该文件保存自动登录的信息，不建议手动修改
-
-### 管理员共享
-
-管理员是bot的可执行账户。处理可以在console的终端输入命令外，console还支持在群聊、私聊中监听命令。但命令的发送者账号必须具有bot的管理员权限。
-通过`manager add [botId] [manageId]`为bot添加管理员，详情查看`/manager`命令。
-大多数插件可通过`manager`进行鉴权，但管理员账户时根据单个bot进行配置的。
-`管理员共享`则将所有登录的bot进行管理员同步。
-
-```yaml
-## plugins/ConsoleAddition/share-manager.yml
-
-managers:
-- 142857
-- 428571
-- 285714
-
-```
-
-> 可在plugins/ConsoleAddition/share-manager.yml中手动添加管理员。
-> 也可以在运行过程中通过/manager命令添加管理员。
-> 管理员将会被保存在share-manager.yml文件中，下次启动时自动同步
-
-
-
-### FAQ.
-
-#### 开发该插件的目的
-
-[Console-Addition][Console-Addition]是对[Mirai-Console][Mirai-Console]功能的扩展，方便插件开发者和使用者。
-同时该项目可以作为一个插件开发的例子，供想要对`Mirai`贡献插件的开发者参考。
-
-
-#### 为什么没有某某某功能
-
-这里，并不实现复杂的逻辑功能。只针对日常开发测试和使用中，能够方便开发者和使用者的功能，进行补充。
-如您需要高定制化的功能，可以寻找其他插件，或在[Issue][Issue]中进行讨论。
-
-#### 某某功能会被移除吗
-
-随着[Mirai-core][Mirai-core]和[Mirai-Console][Mirai-Console]的完善，[Console-Addition][Console-Addition]的功能会逐步被取代。
-
-
-
-[Console-Addition]: https://github.com/ryoii/mirai-console-addition
-[Mirai-core]: https://github.com/mamoe/mirai
-[Mirai-Console]: https://github.com/mamoe/mirai-console
-[Issue]: https://github.com/ryoii/mirai-console-addition/issues
+- 如果您使用修改了本项目源码，请遵循[GPL-3.0](https://github.com/CMHopeSunshine/LittlePaimon/blob/master/LICENSE)开源
